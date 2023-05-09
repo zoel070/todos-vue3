@@ -14,6 +14,7 @@ const state = reactive({
   todos: []
 });
 
+
 const showTodo = computed(() => {
   return state.todos.filter(data => {
     if (filter.value === 'all') {
@@ -34,6 +35,7 @@ function addTodo() {
       completed: false,
     })
     newTodo.value = '';
+    console.log(state.todos)
   }
 }
 
